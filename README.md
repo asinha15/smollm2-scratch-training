@@ -3,6 +3,36 @@
 ## Overview
 Train the [SmolLM2-135M](https://huggingface.co/HuggingFaceTB/SmolLM2-135M) language model **from scratch** on the provided `input.txt` corpus using Google Colab. The workflow is captured in `smollm2_colab.ipynb` and mirrors the official configuration from the SmolLM repository while adapting it to Colab constraints.
 
+## Model Definition
+```
+LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(49153, 576, padding_idx=49152)
+    (layers): ModuleList(
+      (0-29): 30 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): Linear(in_features=576, out_features=576, bias=False)
+          (k_proj): Linear(in_features=576, out_features=192, bias=False)
+          (v_proj): Linear(in_features=576, out_features=192, bias=False)
+          (o_proj): Linear(in_features=576, out_features=576, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=576, out_features=1536, bias=False)
+          (up_proj): Linear(in_features=576, out_features=1536, bias=False)
+          (down_proj): Linear(in_features=1536, out_features=576, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((576,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((576,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((576,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=576, out_features=49153, bias=False)
+)
+```
 ## Contents
 - `smollm2_colab.ipynb` – Colab-ready notebook that drives the entire pretraining run.
 - `input.txt` – Training corpus (upload this when prompted).
