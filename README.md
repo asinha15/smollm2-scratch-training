@@ -44,6 +44,7 @@ Train the [SmolLM2-135M](https://huggingface.co/HuggingFaceTB/SmolLM2-135M) lang
 - SmolLM configuration: https://raw.githubusercontent.com/huggingface/smollm/main/text/pretraining/smollm2/config_smollm2_135M.yaml
 
 ## 5000 steps log
+```
 Step	Training Loss	Validation Loss
 500	0.221300	7.697577
 1000	0.188600	9.043961
@@ -249,8 +250,10 @@ Is't a verdict?
 All:
 No more talking on't; let it  dancehyont.NORis, to change you for allen and supply contradiction descent!But, Lancaster was I sw in, have b now possess, have yetthood to bI the restions are mostROMEO: common cheeksouncingVery sessions to me?Why slew most,That will bether, my sweet, in place, dress, worthy husband.Akindurl'd Master with his rev, my lord, wilt calmdone by up at wall am.I am carake to the happy brain silence:With bag Verona; have the people.Let you was of ' a pieceANIO:H MasterORTHUMNIA:Did only Vol! O something, it be grief we old not people wasTo see beseech you.Y are to't now in aitors unknown safe, sound clouds Aufidius, sound with't very well a poorst thus I have in spite of a sweet sweet sweet face something,Why all banish claim,
 ==============================
+```
 
 ## 50 additional steps log
+```
 Step	Training Loss	Validation Loss
 ***** train metrics *****
   epoch                    =   388.2963
@@ -267,3 +270,4 @@ Step	Training Loss	Validation Loss
   eval_samples_per_second =     24.232
   eval_steps_per_second   =     24.232
 Stage 2 completed. Final checkpoint stored under: smollm2_135m_runs/stage2_5050_steps
+```
